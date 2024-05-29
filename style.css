@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+
+.ibm-plex-mono-bold-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+body{
+    background: #040E03;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px 10%;
+    background: transparent;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+  position: relative;
+  width: 60px; /* Set the desired width */
+  height: 60px; /* Set the desired height */
+  background-image: url('logo.jpg');
+  background-size: cover;/* this can make the photo fill the container by ratio*/
+  background-repeat: no-repeat;
+  background-position: center;/*show the center of the photo*/
+  border-radius: 50%;/*this make the logo circular*/
+  overflow:hidden;
+}
+
+/*animation of logo*/
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: .5s;
+}
+
+/*here are setting the navbar font size, color and hover*/
+.navbar a{
+    font-size:18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px;
+    transition: .3s;
+}
+
+.navbar a::before{
+    content:'';
+    width:0;
+    height:0;
+    background:  #00adb5;
+    position: absolute;
+    top:-1px;right:-1px;
+    z-index: 0;
+    transition: width .5s,height .5s;
+}
+
+.navbar a::after{
+    content:'';
+    width:0;
+    height:0;
+    background:  #00adb5;
+    position: absolute;
+    bottom:-1px;left:-1px;
+    z-index: 0;
+    transition: width .5s,height .5s;
+}
+
+.navbar a:hover{
+    color: #00adb5;
+}
+.navbar a:active{
+    color: #00adb5;
+}
+.navbar a:hover::before{
+    width:calc(10% + 2px);
+    height:calc(10% + 2px);
+}
+.navbar a:hover::after{
+    width:calc(10% + 2px);
+    height:calc(10% + 2px);
+}
+
+.navbar a ::content{
+    height:100%;
+    width:100%;
+    position: absolute;
+    left:0;top:0;
+    z-index: 1;
+    background: #fff;
+}
+
+/* well originally the effect i expect is not like this 
+    however, it seem not bad so i keep it. 
+     ̶(̶i̶ ̶w̶o̶n̶t̶ ̶t̶e̶l̶l̶ ̶u̶ ̶t̶h̶i̶s̶ ̶i̶s̶ ̶a̶ ̶b̶u̶g̶ ̶i̶ ̶c̶a̶n̶t̶ ̶f̶i̶x̶ ̶i̶t̶)̶*/
+
+
+/* Here is setting the style of the body*/
+.Home{
+    display: flex;
+    align-items:center;
+    height:100vh;
+    padding: 0 10%;
+    background: url('background.JPG') no-repeat;
+    background-size: auto;
+    background-position: right;
+}
+/* Styles for tablet devices */
+@media (max-width: 768px) {
+    .Home {
+        padding: 0 5%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+    .Home {
+        height: auto;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.Home-content{
+        max-width: 700px; 
+}
+
+.Home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+}
+/*animation of H1*/
+.Home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.Home-content h3{
+    position: relative;
+    font-size: 26px;
+    font-size: 700;
+    color: aqua;
+}
+/*animation of H3*/
+.Home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.Home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    line-height: 1.2;
+}
+
+/*animation of P*/
+.Home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.Home-content .box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+}
+
+/*animation of box*/
+.Home-content .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1.8s;
+    z-index: 2;
+}
+
+.box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height:100%;
+    background:#00adb5;
+    border-radius: 8px;
+    border:2px solid #00adb5;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;/*this is setting the priority of between background and word*/
+    overflow: hidden;
+    transition: .5s;/*this is the transition time*/
+}
+
+.box a:hover{
+    color: #00adb5;/*change the color when hover*/
+}
+.box a:nth-child(2){
+    background: transparent;
+    color: #00adb5;
+}
+
+.box a:nth-child(2):hover{
+    color: black;/*change the color when hover*/
+}
+.box a:nth-child(2)::before{
+    background: #00adb5;
+}
+
+
+
+/*here are setting the hover of the button*/
+.box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height:100%;
+    background: black;
+    z-index: -1;/*this is less priority*/
+    transition: .5s;/*this is the transition time*/
+}
+
+.box a:hover::before{
+    width: 100%;
+}
+
+/* here are the setting of the social media icon*/
+.Home-so{
+    position: absolute;
+    bottom: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*animation of social media icon*/
+.Home-so::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+}
+.Home-so a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border: 2px solid #00adb5;
+    border-radius:50%;
+    font-size: 30px;
+    color: #00adb5;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;/*this is setting the background not out of the boarder*/
+    transition: .5s ;
+}
+
+
+.Home-so a:hover{
+    color: #081b28;/*change the color when hover*/
+}
+.Home-so a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height: 100%;
+    background: #00adb5;
+    z-index: -1;
+    transition: .5s;
+}
+
+.Home-so a:hover:before{
+    width: 100%;
+}
+
+.Home-image{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 66%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation:  ActiveHover .1s forwards;
+}
+
+/*animation of Home-image*/
+.Home-image::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:#040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1s;
+    z-index: 999;/*make sure to cover the navbar :)*/
+}
+
+.Home-image2{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation:  ActiveHover .1s forwards;
+}
+
+/*animation of Home-image of timetable*/
+.Home-image2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:#040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1s;
+    z-index: 999;/*make sure to cover the navbar :)*/
+}
+
+#email{
+	float:right;
+	margin-right:5px;
+	padding-top:5px;
+	font-size:16px;
+	font-family: Verdana, sans-serif;
+	color:red;
+}
+
+/*animation of P*/
+.Home-content p #email::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #040E03;
+    animation: showanime 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes showanime{
+    100%{
+        width:0;
+    }
+}
+
+@keyframes ActiveHover {
+    100%{
+        pointer-events:auto;
+    }
+}
