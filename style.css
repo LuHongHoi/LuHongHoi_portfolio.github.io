@@ -449,10 +449,7 @@ body{
     padding: 20px;
     text-align: center;
   }
- .header .logo {
-    font-size: 24px;
-  }
-
+	
   .navbar .button {
     flex-direction: column;
     align-items: center;
@@ -496,10 +493,6 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-  }
-
- .header .logo {
-    font-size: 28px;
   }
 
   .navbar .button {
